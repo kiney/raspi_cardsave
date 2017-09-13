@@ -1,0 +1,9 @@
+raspi_cardsave:
+  no_swap: true
+  tmpfs:
+    - path: /var/log
+      size: 100m
+    - path: /var/tmp
+      size: 30m
+    - path: /tmp
+      size: 100m

@@ -7,3 +7,14 @@ raspi_cardsave:
       size: 30m
     - path: /tmp
       size: 100m
+
+raspi_config:
+  ### ansible templated stuff below, DO NOT EDIT
+  arm_freq: 1000
+  core_freq: 500
+  sdram_freq: 500
+  over_voltage: 2
+  h264_freq: 500
+  gpu_mem: 256
+  #https://www.raspberrypi.org/forums/viewtopic.php?f: 29&t: 82373
+  avoid_warnings: 2

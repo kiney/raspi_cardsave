@@ -1,0 +1,9 @@
+- name: set raspi config.txt
+  template:
+    src: config.txt
+    dest: /boot/config.txt
+    owner: root
+    group: root
+    # yep, thats the original perms.. anyway, its FAT
+    mode: 0755
+  tags: ['raspi', 'config.txt']

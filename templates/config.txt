@@ -57,13 +57,9 @@
 dtparam=audio=on
 
 ### ansible templated stuff below, DO NOT EDIT
-arm_freq={{ raspi_config.arm_freq }}
-core_freq={{ raspi_config.core_freq }}
-sdram_freq={{ raspi_config.sdram_freq }}
-over_voltage={{ raspi_config.over_voltage }}
-h264_freq={{ raspi_config.h264_freq }}
-
-gpu_mem={{ raspi_config.arm_freq }}
 
 #https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=82373
-avoid_warnings={{ raspi_config.avoid_warnings }}
+#avoid_warnings=2
+{% for key, value in raspi_config.iteritems() %}
+{{ key }}={{ value }}
+{% endfor %}
